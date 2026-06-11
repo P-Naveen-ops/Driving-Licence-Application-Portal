@@ -1,0 +1,221 @@
+/* ===== DrivingLicencePortal_V1 — Global Styles ===== */
+:root {
+  --navy: #003087;
+  --navy-dark: #001f5b;
+  --navy-light: #0047bb;
+  --saffron: #FF6700;
+  --saffron-light: #FF8C3A;
+  --gold: #D4A017;
+  --white: #FFFFFF;
+  --off-white: #F4F6FA;
+  --light-gray: #E8ECF4;
+  --mid-gray: #B0BBC8;
+  --text-dark: #0D1B2A;
+  --text-mid: #3A4A5C;
+  --text-light: #6B7A8D;
+  --success: #18A558;
+  --error: #D32F2F;
+  --warning: #E65100;
+  --border: #D0D9E8;
+  --shadow-sm: 0 2px 8px rgba(0,48,135,0.08);
+  --shadow-md: 0 6px 24px rgba(0,48,135,0.13);
+  --shadow-lg: 0 16px 48px rgba(0,48,135,0.18);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-body: 'Noto Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button { cursor: pointer; font-family: var(--font-body); }
+
+input, select, textarea {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--light-gray); }
+::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
+
+/* ===== Utility ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-pad { padding: 80px 0; }
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+@keyframes slideRight {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.fade-up { animation: fadeUp 0.6s ease both; }
+.fade-in { animation: fadeIn 0.5s ease both; }
+
+/* ===== Btn Styles ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  color: var(--white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,48,135,0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,48,135,0.4);
+  background: linear-gradient(135deg, var(--navy-light), var(--navy));
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--navy);
+  padding: 11px 28px;
+  border: 2px solid var(--navy);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+}
+.btn-secondary:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-saffron {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-light));
+  color: var(--white);
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(255,103,0,0.3);
+}
+.btn-saffron:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,103,0,0.4);
+}
+
+/* ===== Form elements ===== */
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.form-control {
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control:focus {
+  border-color: var(--navy-light);
+  box-shadow: 0 0 0 3px rgba(0,71,187,0.12);
+}
+.form-control::placeholder { color: var(--mid-gray); }
+
+/* ===== Card ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  padding: 28px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* ===== Badge ===== */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge-success { background: #E8F5E9; color: var(--success); }
+.badge-warning { background: #FFF3E0; color: var(--warning); }
+.badge-error   { background: #FFEBEE; color: var(--error); }
+.badge-info    { background: #E3F2FD; color: var(--navy-light); }
+
+/* ===== Status bar at top ===== */
+.gov-topbar {
+  background: var(--navy-dark);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.78rem;
+  padding: 5px 0;
+  letter-spacing: 0.03em;
+}
+.gov-topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

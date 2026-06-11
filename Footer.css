@@ -1,0 +1,100 @@
+.footer {
+  background: var(--navy-dark);
+  color: rgba(255,255,255,0.75);
+  margin-top: auto;
+}
+
+.footer-top { padding: 60px 0 48px; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 48px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.footer-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+.footer-logo-sub { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+
+.footer-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+
+.footer-flags {
+  display: flex;
+  gap: 2px;
+  width: 48px;
+}
+.flag-stripe {
+  height: 4px;
+  flex: 1;
+  border-radius: 2px;
+}
+.flag-stripe.saffron { background: #FF9933; }
+.flag-stripe.white   { background: #FFFFFF; }
+.flag-stripe.green   { background: #138808; }
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--saffron);
+  display: inline-block;
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s;
+}
+.footer-col ul li a { color: rgba(255,255,255,0.65); transition: color 0.2s; }
+.footer-col ul li a:hover, .footer-col ul li:hover { color: var(--saffron-light); }
+
+.footer-bottom {
+  background: rgba(0,0,0,0.25);
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+.footer-bottom-links a:hover { color: var(--saffron-light); }
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 580px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+}
